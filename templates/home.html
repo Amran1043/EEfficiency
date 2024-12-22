@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEfficiency - Energy Efficiency Expert System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to EEfficiency</h1>
+    <h2>Let's Analyse Your Building's Energy Efficiency!</h2>
+    <form action="{{ url_for('analyze') }}">
+        <button type="submit">Start</button>
+    </form>
+<section class="fun-fact">
+    <h3>Fun Fact!</h3>
+    <p id="funFactText"></p>
+  </section>
+<script>
+    // Array of Fun Facts
+    const funFacts = [
+      "Switching to LED lighting can save up to 80% of the energy used by traditional incandescent bulbs!",
+      "Properly insulating your building can reduce heating and cooling costs by up to 20%.",
+      "Energy-efficient HVAC systems can use up to 50% less energy than older systems.",
+      "Using natural lighting during the day can cut down electricity use by up to 10%.",
+      "Buildings that undergo regular energy audits save an average of 15% on energy bills."
+    ];
+
+    // Get a random fun fact
+    const randomFact = funFacts[Math.floor(Math.random() * funFacts.length)];
+
+    // Display the random fun fact in the paragraph
+    document.getElementById("funFactText").textContent = randomFact;
+  </script>
+</body>
+</html>

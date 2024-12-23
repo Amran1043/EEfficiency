@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EEfficiency - Energy Efficiency Expert System</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for(filename='style.css') }}">
 </head>
 <body>
     <h1>Welcome to EEfficiency</h1>
     <h2>Let's Analyse Your Building's Energy Efficiency!</h2>
     <form action="{{ url_for('analyze') }}">
         <button type="submit">Start</button>
+        <a href="index.html">Start</a>
     </form>
 <section class="fun-fact">
     <h3>Fun Fact!</h3>
